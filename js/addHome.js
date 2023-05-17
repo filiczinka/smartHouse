@@ -22,6 +22,13 @@ selectBtn.addEventListener('click', function () {
 	newElement.textContent = optionRooms.options[optionRooms.selectedIndex].textContent;
 	selectedRooms.appendChild(newElement);
 
+	let elementDeleteBtn = document.createElement('button');
+	elementDeleteBtn.textContent = 'Видалити';
+	elementDeleteBtn.addEventListener('click', function () {
+		newElement.remove();``
+	});
+	newElement.appendChild(elementDeleteBtn);
+
 	newElement.style.fontFamily = "'Yanone Kaffeesatz', sans-serif";
 	newElement.style.fontWeight = '400';
 	newElement.style.listStyle = 'none';
