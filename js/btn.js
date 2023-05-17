@@ -14,7 +14,9 @@ btn.addEventListener('click', createNewTab);
 
 function createNewTab() {
 	setTimeout(function () {
-		window.open('addHome.js', '_blank');
+		window.open('addHome.html', '_blank');
 	},
 		500);
 }
+
+btn.classList.add('transition');

@@ -29,3 +29,12 @@ h1 {
 	padding: 14px 34px;
 	margin-top: 25px;
 }
+
+.home__text-items {
+	font-family: var(--header-font-family);
+	font-weight: 700;
+}
+
+.transition {
+  transition: background-color 0.5s ease-in-out;
+}
