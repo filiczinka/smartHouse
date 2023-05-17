@@ -21,4 +21,5 @@ img {
 :root {
 --header-font-family: 'Yanone Kaffeesatz', sans-serif; 
 --text-font-family: 'Caveat', cursive;
+--btn-color:  rgb(97, 208, 130);
 }

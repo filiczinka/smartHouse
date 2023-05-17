@@ -1,16 +1,31 @@
 .home {
-display: grid;
-grid-template-columns: 60% 40%;
-background-color: rgb(212, 252, 252);
-
+	display: grid;
+	grid-template-columns: 60% 40%;
+	background-image: url(../img/home-bg.PNG);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	align-items: center;
 }
 
 h1 {
-	font-size: 46px;
+	font-size: 56px;
 	font-family: var(--header-font-family);
+	margin-bottom: 25px;
 }
 
 .home__banner-text {
-font-family: var(--text-font-family);
-font-size: 22px;
+	padding-left: 30px;
+	font-family: var(--header-font-family);
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.home__banner-btn {
+	font-family: var(--header-font-family);
+	background-color: rgb(97, 208, 130);
+	border: none;
+	border-radius: 25px;
+	padding: 14px 34px;
+	margin-top: 25px;
 }
