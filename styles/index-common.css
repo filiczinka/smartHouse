@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+:root {
+--header-font-family: 'Yanone Kaffeesatz', sans-serif; 
+--text-font-family: 'Caveat', cursive;
+}
