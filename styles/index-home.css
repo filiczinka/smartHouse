@@ -1,4 +1,4 @@
 h1 {
-font-size: 36px;
-font-family: ;
+	font-size: 36px;
+	font-family: var(--header-font-family);
 }
