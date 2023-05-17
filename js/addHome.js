@@ -25,7 +25,7 @@ selectBtn.addEventListener('click', function () {
 	let elementDeleteBtn = document.createElement('button');
 	elementDeleteBtn.textContent = 'Видалити';
 	elementDeleteBtn.addEventListener('click', function () {
-		newElement.remove();``
+		newElement.remove();
 	});
 	newElement.appendChild(elementDeleteBtn);
 
