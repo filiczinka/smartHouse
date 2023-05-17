@@ -5,14 +5,15 @@ body {
 .add-home {
 	display: grid;
 	grid-template-columns: 60% 40%;
+
 	height: 100vh;
 	align-items: center;
 }
 
 .add-home__title {
-font-family: var(--header-font-family);
-font-size: 32px;
-text-align: center;
+	font-family: var(--header-font-family);
+	font-size: 32px;
+	text-align: center;
 }
 
 .add-home__form {
