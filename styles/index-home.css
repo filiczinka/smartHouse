@@ -1,4 +1,16 @@
+.home {
+display: grid;
+grid-template-columns: 60% 40%;
+background-color: rgb(212, 252, 252);
+
+}
+
 h1 {
-	font-size: 36px;
+	font-size: 46px;
 	font-family: var(--header-font-family);
+}
+
+.home__banner-text {
+font-family: var(--text-font-family);
+font-size: 22px;
 }
