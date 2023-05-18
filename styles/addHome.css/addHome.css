@@ -55,7 +55,8 @@ body {
 }
 
 #add-home__select__button,
-.delete__elem-btn {
+.delete__elem-btn,
+.create__btn {
 	background-color: rgb(97, 208, 130);
 	border-radius: 25px;
 	border: 2px solid black;
@@ -65,6 +66,10 @@ body {
 	font-size: 30px;
 	font-family: var(--header-font-family);
 	font-weight: 400;
+}
+
+.delete__elem-btn {
+	background-color: red;
 }
 
 #selected-rooms {
@@ -79,4 +84,14 @@ body {
 .new__items,
 .delete__elem-btn {
 	margin-top: 20px;
+}
+
+.btn:hover,
+#add-home__select__button:hover {
+	background-color: yellow;
+	transition: 0.4s ease-out;
+}
+
+.create__btn {
+	width: 100%;
 }

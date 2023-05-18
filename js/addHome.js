@@ -24,7 +24,7 @@ selectBtn.addEventListener('click', function () {
 	selectedRooms.appendChild(newElement);
 
 	let elementDeleteBtn = document.createElement('button');
-	elementDeleteBtn.className = 'delete__elem-btn';
+	elementDeleteBtn.className = 'delete__elem-btn btn';
 	elementDeleteBtn.textContent = 'Вилучити';
 	elementDeleteBtn.addEventListener('click', function () {
 		newElement.remove();
@@ -35,7 +35,23 @@ selectBtn.addEventListener('click', function () {
 	newElement.style.fontFamily = "'Yanone Kaffeesatz', sans-serif";
 	newElement.style.fontWeight = '400';
 	newElement.style.listStyle = 'none';
+
+	addButton();
 });
+
+
+const createBtn = document.createElement('button');
+createBtn.className = 'create__btn btn';
+createBtn.textContent = 'Створити';
+
+function addButton() {
+	if (selectedRooms.children.length > 0) {
+		divText.appendChild(createBtn);
+	} else if (selectedRooms.children.length === 0) {
+		createBtn.remove();
+	}
+}
+
 
 divText.appendChild(h2);
 divText.appendChild(optionRooms);
