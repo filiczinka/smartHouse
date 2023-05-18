@@ -5,7 +5,7 @@ const selectedRooms = document.getElementById('selected-rooms');
 
 const divPhoto = document.createElement('div');
 const img = document.createElement('img');
-img.src = 'img/banner.png';
+img.src = '../img/banner.png';
 
 const section = document.createElement('section');
 section.className = 'add-home container';
