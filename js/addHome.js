@@ -17,18 +17,27 @@ h2.textContent = 'НАЛАШТУВАННЯ';
 const divText = document.createElement('div');
 divText.className = 'add-home__form';
 
+function addButton() {
+	if (selectedRooms.children.length > 0) {
+		divText.appendChild(createBtn);
+	} else {
+		createBtn.remove();
+	}
+}
+
 selectBtn.addEventListener('click', function () {
-	let newElement = document.createElement('li');
+	const newElement = document.createElement('li');
 	newElement.className = 'new__items';
 	newElement.textContent = optionRooms.options[optionRooms.selectedIndex].textContent;
 	selectedRooms.appendChild(newElement);
 
-	let elementDeleteBtn = document.createElement('button');
+	const elementDeleteBtn = document.createElement('button');
 	elementDeleteBtn.className = 'delete__elem-btn btn';
 	elementDeleteBtn.textContent = 'Вилучити';
 	elementDeleteBtn.addEventListener('click', function () {
 		newElement.remove();
 		elementDeleteBtn.remove();
+		addButton();
 	});
 	selectedRooms.appendChild(elementDeleteBtn);
 
@@ -39,31 +48,22 @@ selectBtn.addEventListener('click', function () {
 	addButton();
 });
 
-
-const  createBtn = document.createElement('button');
+const createBtn = document.createElement('button');
 createBtn.className = 'create__btn btn';
 createBtn.textContent = 'Створити';
-
-function addButton() {
-	if (selectedRooms.children.length > 0) {
-		divText.appendChild(createBtn);
-	} else if (selectedRooms.children.length === 0) {
-		createBtn.remove();
-	}
-}
-
 createBtn.addEventListener('click', function createNewTab() {
 	setTimeout(function () {
 		window.open('../myHome.html', '_target');
-	},
-		500);
+	}, 500);
 });
-
 
 divText.appendChild(h2);
 divText.appendChild(optionRooms);
 divText.appendChild(selectBtn);
 divText.appendChild(selectedRooms);
-section.append(divText, divPhoto);
+divText.appendChild(createBtn);
+
+section.appendChild(divText);
+section.appendChild(divPhoto);
 body.insertBefore(section, body.firstChild);
 divPhoto.appendChild(img);
