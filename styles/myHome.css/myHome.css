@@ -1,3 +1,52 @@
 body {
 	background-image: url(../../img/home-bg.PNG);
+	height: 100vh;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 56px;
+	font-family: var(--header-font-family);
+	margin-bottom: 25px;
+	text-align: center;
+	padding: 20px;
+}
+
+.my-home {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	align-items: center;
+}
+
+.my-home__photo {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.option__container {
+	position: absolute;
+	left: 0;
+	top: 40%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.option__item {
+	width: 80px;
+	height: 80px;
+	background-color: blue;
+	color: white;
+	border-radius: 50%;
+	border: 2px solid black;
+}
+
+.option__item:hover {
+box-shadow: 5px 5px 50px 20px rgba(252, 231, 43, 0.717);
+background-color: rgba(245, 245, 125, 0.476);
+}
+
+.option__icon {
+	width: 90%;
 }
