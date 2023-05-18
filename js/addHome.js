@@ -25,7 +25,7 @@ selectBtn.addEventListener('click', function () {
 
 	let elementDeleteBtn = document.createElement('button');
 	elementDeleteBtn.className = 'delete__elem-btn';
-	elementDeleteBtn.textContent = '--';
+	elementDeleteBtn.textContent = 'Вилучити';
 	elementDeleteBtn.addEventListener('click', function () {
 		newElement.remove();
 		elementDeleteBtn.remove();
