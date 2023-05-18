@@ -40,7 +40,7 @@ selectBtn.addEventListener('click', function () {
 });
 
 
-const createBtn = document.createElement('button');
+const  createBtn = document.createElement('button');
 createBtn.className = 'create__btn btn';
 createBtn.textContent = 'Створити';
 
@@ -51,6 +51,13 @@ function addButton() {
 		createBtn.remove();
 	}
 }
+
+createBtn.addEventListener('click', function createNewTab() {
+	setTimeout(function () {
+		window.open('../myHome.html', '_target');
+	},
+		500);
+});
 
 
 divText.appendChild(h2);
