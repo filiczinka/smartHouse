@@ -17,8 +17,11 @@ h2.textContent = 'НАЛАШТУВАННЯ';
 const divText = document.createElement('div');
 divText.className = 'add-home__form';
 
+const createBtn = document.createElement('button');
 function addButton() {
 	if (selectedRooms.children.length > 0) {
+		createBtn.className = 'create__btn btn';
+		createBtn.textContent = 'Створити';
 		divText.appendChild(createBtn);
 	} else {
 		createBtn.remove();
@@ -28,6 +31,9 @@ function addButton() {
 selectBtn.addEventListener('click', function () {
 	const newElement = document.createElement('li');
 	newElement.className = 'new__items';
+	newElement.style.fontFamily = "'Yanone Kaffeesatz', sans-serif";
+	newElement.style.fontWeight = '400';
+	newElement.style.listStyle = 'none';
 	newElement.textContent = optionRooms.options[optionRooms.selectedIndex].textContent;
 	selectedRooms.appendChild(newElement);
 
@@ -37,23 +43,17 @@ selectBtn.addEventListener('click', function () {
 	elementDeleteBtn.addEventListener('click', function () {
 		newElement.remove();
 		elementDeleteBtn.remove();
+
 		addButton();
 	});
 	selectedRooms.appendChild(elementDeleteBtn);
 
-	newElement.style.fontFamily = "'Yanone Kaffeesatz', sans-serif";
-	newElement.style.fontWeight = '400';
-	newElement.style.listStyle = 'none';
-
 	addButton();
 });
 
-const createBtn = document.createElement('button');
-createBtn.className = 'create__btn btn';
-createBtn.textContent = 'Створити';
 createBtn.addEventListener('click', function createNewTab() {
 	setTimeout(function () {
-		window.open('../myHome.html', '_target');
+		window.open('../myHome.html', '_blank');
 	}, 500);
 });
 
