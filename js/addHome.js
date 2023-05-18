@@ -19,15 +19,18 @@ divText.className = 'add-home__form';
 
 selectBtn.addEventListener('click', function () {
 	let newElement = document.createElement('li');
+	newElement.className = 'new__items';
 	newElement.textContent = optionRooms.options[optionRooms.selectedIndex].textContent;
 	selectedRooms.appendChild(newElement);
 
 	let elementDeleteBtn = document.createElement('button');
-	elementDeleteBtn.textContent = 'Видалити';
+	elementDeleteBtn.className = 'delete__elem-btn';
+	elementDeleteBtn.textContent = '--';
 	elementDeleteBtn.addEventListener('click', function () {
 		newElement.remove();
+		elementDeleteBtn.remove();
 	});
-	newElement.appendChild(elementDeleteBtn);
+	selectedRooms.appendChild(elementDeleteBtn);
 
 	newElement.style.fontFamily = "'Yanone Kaffeesatz', sans-serif";
 	newElement.style.fontWeight = '400';
