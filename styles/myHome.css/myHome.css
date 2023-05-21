@@ -45,6 +45,9 @@ h1 {
 .option__item:hover {
 box-shadow: 5px 5px 50px 20px rgba(252, 231, 43, 0.717);
 background-color: rgba(245, 245, 125, 0.476);
+border: 2px solid white;
+width: 100px;
+height: 100px;
 }
 
 .option__icon {
