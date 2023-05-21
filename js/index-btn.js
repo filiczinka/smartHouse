@@ -14,7 +14,7 @@ btn.addEventListener('click', createNewTab);
 
 function createNewTab() {
 	setTimeout(function () {
-		window.open('addHome.html', '_blank');
+		window.open('settingsHome.html', '_blank');
 	},
 		500);
 }
