@@ -88,7 +88,7 @@ function createElementsFromArray(arr) {
 let clickCreateBtn = createBtn.addEventListener('click', function createNewTab() {
 	console.log(selectedRoomIds);
 	formText.style.display = 'none';
-	navTabs.style.display = 'block';
+	navTabs.style.display = 'flex';
 	radiusOptionList();
 	createElementsFromArray(selectedRoomIds);
 });
