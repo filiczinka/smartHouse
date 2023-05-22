@@ -3,10 +3,10 @@ container.style.display = 'none';
 const items = Array.from(document.querySelectorAll('.option__item'));
 
 function radiusOptionList() {
-  const radiusX = 200; // Радіус по осі X
+  const radiusX = 220; // Радіус по осі X
   const radiusY = 150; // Радіус по осі Y
-  const centerX = 825; // Координата центру по осі X
-  const centerY = -350; // Координата центру по осі Y
+  const centerX = 895; // Координата центру по осі X
+  const centerY = -340; // Координата центру по осі Y
   const startAngle = -Math.PI / 2;
   const angleStep = (Math.PI * 2) / items.length;
 

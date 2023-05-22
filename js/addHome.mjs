@@ -2,6 +2,8 @@ const body = document.querySelector('body');
 const optionRooms = document.getElementById('rooms');
 const selectBtn = document.getElementById('add-home__select__button');
 const selectedRooms = document.getElementById('selected-rooms');
+const formText = document.createElement('div');
+formText.className = 'form-text';
 
 const divPhoto = document.createElement('div');
 const img = document.createElement('img');
@@ -23,7 +25,7 @@ function addButton() {
 	if (selectedRooms.children.length > 0) {
 		createBtn.className = 'create__btn btn';
 		createBtn.textContent = 'Створити';
-		divText.appendChild(createBtn);
+		formText.appendChild(createBtn);
 	} else {
 		createBtn.remove();
 	}
@@ -67,15 +69,16 @@ let createRoomList = selectBtn.addEventListener('click', function () {
 
 let clickCreateBtn = createBtn.addEventListener('click', function createNewTab() {
 	console.log(selectedRoomIds);
-	divText.style.display = 'none';
+	formText.style.display = 'none';
 	radiusOptionList();
 });
 
-divText.appendChild(h2);
-divText.appendChild(optionRooms);
-divText.appendChild(selectBtn);
-divText.appendChild(selectedRooms);
-divText.appendChild(createBtn);
+divText.appendChild(formText);
+
+formText.appendChild(h2);
+formText.appendChild(optionRooms);
+formText.appendChild(selectBtn);
+formText.appendChild(selectedRooms);
 
 section.appendChild(divText);
 section.appendChild(divPhoto);
