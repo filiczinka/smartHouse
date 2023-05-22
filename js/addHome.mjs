@@ -37,7 +37,7 @@ let createRoomList = selectBtn.addEventListener('click', function () {
 	const selectedRoomLabel = optionRooms.options[optionRooms.selectedIndex].textContent;
 
 	if (!selectedRoomIds.includes(selectedRoom)) {
-		selectedRoomIds.push(selectedRoom);
+		selectedRoomIds.push(selectedRoomLabel);
 
 		const newElement = document.createElement('li');
 		newElement.className = 'new__items';
@@ -67,10 +67,30 @@ let createRoomList = selectBtn.addEventListener('click', function () {
 	}
 });
 
+const navTabs = document.createElement('div');
+navTabs.className = 'nav-tabs';
+divText.appendChild(navTabs);
+navTabs.style.display = 'none';
+
+function createElementsFromArray(arr) {
+  const elements = [];
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    const newElement = document.createElement('a');
+		newElement.className = 'tabs-item';
+    newElement.textContent = selectedRoomIds[i] + ' ';
+    elements.push(newElement);
+		navTabs.appendChild(newElement);
+  }
+  return elements;
+}
+
 let clickCreateBtn = createBtn.addEventListener('click', function createNewTab() {
 	console.log(selectedRoomIds);
 	formText.style.display = 'none';
+	navTabs.style.display = 'block';
 	radiusOptionList();
+	createElementsFromArray(selectedRoomIds);
 });
 
 divText.appendChild(formText);

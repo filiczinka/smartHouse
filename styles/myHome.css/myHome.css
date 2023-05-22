@@ -52,3 +52,8 @@ h1 {
 .option__icon {
 	width: 90%;
 }
+
+.tabs-item {
+font-family: var(--header-font-family);
+font-size: 42px;
+}
