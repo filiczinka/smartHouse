@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/settingsHome.css/index.css">
+	<link rel="stylesheet" href="styles/myHome.css/index.css">
 	<title>Add Home</title>
 </head>
 
@@ -27,7 +28,25 @@
 
 	<ul id="selected-rooms">Обрані позиції:</ul>
 
-	<script src="js/addHome.js"></script>
+	<section class="my-home container">
+		<div id="my-home__text">
+
+		</div>
+
+		<div class="option__container">
+			<div class="light option__item"><img class="option__icon" src="img/lightbulb.png" alt=""></div>
+			<div class="temperature option__item"><img class="option__icon" src="img/thermometer.png" alt=""></div>
+			<div class="wi-fi option__item"><img class="option__icon" src="img/wifi.png" alt=""></div>
+			<div class="door option__item"><img class="option__icon" src="img/key.png" alt=""></div>
+			<div class="camera option__item"><img class="option__icon" src="img/video-camera.png" alt=""></div>
+			<div class="security option__item"><img class="option__icon" src="img/thief.png" alt=""></div>
+		</div>
+
+	</section>
+
+	<script type="module" src="js/addHome.mjs"></script>
+	<script src="js/radiusList.js"></script>
+	<script type="module" src="js/myHome-nav-tabs.mjs"></script>
 </body>
 
 </html>
