@@ -103,3 +103,6 @@ font-family: 'Yanone Kaffeesatz', sans-serif;
 font-weight: 400;
 list-style: none;
 }
+newElement.style.fontFamily = "'Yanone Kaffeesatz', sans-serif";
+newElement.style.fontWeight = '400';
+newElement.style.listStyle = 'none';

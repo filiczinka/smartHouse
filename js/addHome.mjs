@@ -9,8 +9,8 @@ const divPhoto = document.createElement('div');
 const img = document.createElement('img');
 img.src = '../img/banner.png';
 
-const section = document.createElement('section');
-section.className = 'add-home container';
+const sectionContainer = document.createElement('section');
+sectionContainer.className = 'add-home container';
 
 
 const h2 = document.createElement('h2');
@@ -101,7 +101,7 @@ form.appendChild(chooseRooms);
 form.appendChild(addRoomToListBtn);
 form.appendChild(selectedRoomsList);
 
-section.appendChild(divText);
-section.appendChild(divPhoto);
-body.insertBefore(section, body.firstChild);
+sectionContainer.appendChild(divText);
+sectionContainer.appendChild(divPhoto);
+body.insertBefore(sectionContainer, body.firstChild);
 divPhoto.appendChild(img);
