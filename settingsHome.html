@@ -13,17 +13,17 @@
 <body>
 	<!-- Settings -->
 	<select name="rooms" id="rooms">
-		<option value="bedroom">Спальня</option>
-		<option value="bathroom">Ванна Кімната</option>
-		<option value="basement">Підвал</option>
-		<option value="garage">Гараж</option>
-		<option value="office">Офіс</option>
-		<option value="guest__room">Вітальня</option>
-		<option value="dining__room">Їдальня</option>
-		<option value="kitchen">Кухня</option>
-		<option value="laundry__room">Пральня</option>
-		<option value="gym">Тренажерний Зал</option>
-		<option value="game__room">Ігрова Кімната</option>
+		<option class="bedroom" value="bedroom">Спальня</option>
+		<option class="bathroom" value="bathroom">Ванна Кімната</option>
+		<option class="basement" value="basement">Підвал</option>
+		<option class="garage" value="garage">Гараж</option>
+		<option class="office" value="office">Офіс</option>
+		<option class="guest__room" value="guest__room">Вітальня</option>
+		<option class="dining__room" value="dining__room">Їдальня</option>
+		<option class="kitchen" value="kitchen">Кухня</option>
+		<option class="laundry__room" value="laundry__room">Пральня</option>
+		<option class="gym" value="gym">Тренажерний Зал</option>
+		<option class="game__room" value="game__room">Ігрова Кімната</option>
 	</select>
 	<button id="add-home__select__button">Вибрати</button>
 
@@ -40,13 +40,16 @@
 			<div class="camera option__item"><img class="option__icon" src="img/video-camera.png" alt=""></div>
 			<div class="security option__item"><img class="option__icon" src="img/thief.png" alt=""></div>
 		</div>
-
 	</section>
+
+
+	<section class="ligth__container"></section>
+
 
 	<script type="module" src="js/addHome.mjs"></script>
 	<script src="js/radiusList.js"></script>
-	<script src="js/constructors.mjs"></script>
-	<script src="js/rooms.mjs"></script>
+	<script type="module" src="js/rooms.mjs"></script>
+	<script src="js/light.mjs"></script>
 </body>
 
 </html>

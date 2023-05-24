@@ -1,9 +1,9 @@
 const body = document.querySelector('body');
-const optionRooms = document.getElementById('rooms');
-const selectBtn = document.getElementById('add-home__select__button');
-const selectedRooms = document.getElementById('selected-rooms');
-const formText = document.createElement('div');
-formText.className = 'form-text';
+const chooseRooms = document.getElementById('rooms');
+const addRoomToListBtn = document.getElementById('add-home__select__button');
+const selectedRoomsList = document.getElementById('selected-rooms');
+const form = document.createElement('div');
+form.className = 'form';
 
 const divPhoto = document.createElement('div');
 const img = document.createElement('img');
@@ -20,32 +20,29 @@ h2.textContent = 'НАЛАШТУВАННЯ';
 const divText = document.createElement('div');
 divText.className = 'add-home__form';
 
+//функція для кнопки 'створити'
 const createBtn = document.createElement('button');
 function addButton() {
-	if (selectedRooms.children.length > 0) {
+	if (selectedRoomsList.children.length > 0) {
 		createBtn.className = 'create__btn btn';
 		createBtn.textContent = 'Створити';
-		formText.appendChild(createBtn);
+		form.appendChild(createBtn);
 	} else {
 		createBtn.remove();
 	}
 }
 
 const selectedRoomIds = [];
-let createRoomList = selectBtn.addEventListener('click', function () {
-	const selectedRoom = optionRooms.options[optionRooms.selectedIndex].value;
-	const selectedRoomLabel = optionRooms.options[optionRooms.selectedIndex].textContent;
-
+//виведення вибраних кімнат в список
+addRoomToListBtn.addEventListener('click', function () {
+	const selectedRoom = chooseRooms.options[chooseRooms.selectedIndex].value;
+	const selectedRoomLabel = chooseRooms.options[chooseRooms.selectedIndex].textContent;
+	const newElement = document.createElement('li');
+	newElement.className = 'new__items';
 	if (!selectedRoomIds.includes(selectedRoom)) {
 		selectedRoomIds.push(selectedRoomLabel);
-
-		const newElement = document.createElement('li');
-		newElement.className = 'new__items';
-		newElement.style.fontFamily = "'Yanone Kaffeesatz', sans-serif";
-		newElement.style.fontWeight = '400';
-		newElement.style.listStyle = 'none';
 		newElement.textContent = selectedRoomLabel;
-		selectedRooms.appendChild(newElement);
+		selectedRoomsList.appendChild(newElement);
 
 		const elementDeleteBtn = document.createElement('button');
 		elementDeleteBtn.className = 'delete__elem-btn btn';
@@ -61,7 +58,7 @@ let createRoomList = selectBtn.addEventListener('click', function () {
 
 			addButton();
 		});
-		selectedRooms.appendChild(elementDeleteBtn);
+		selectedRoomsList.appendChild(elementDeleteBtn);
 
 		addButton();
 	}
@@ -72,33 +69,37 @@ navTabs.className = 'nav-tabs';
 divText.appendChild(navTabs);
 navTabs.style.display = 'none';
 
+//функція для виведення кімнат в nav tabs
 function createElementsFromArray(arr) {
-  const elements = [];
-  for (let i = 0; i < arr.length; i++) {
-    const item = arr[i];
-    const newElement = document.createElement('a');
+	const elements = [];
+	for (let i = 0; i < arr.length; i++) {
+		const item = arr[i];
+		const newElement = document.createElement('h3');
 		newElement.className = 'tabs-item';
-    newElement.textContent = selectedRoomIds[i] + ' ';
-    elements.push(newElement);
+		newElement.id = chooseRooms.options[chooseRooms.selectedIndex].value;
+		newElement.textContent = selectedRoomIds[i] + ' ';
+		elements.push(newElement);
 		navTabs.appendChild(newElement);
-  }
-  return elements;
+	}
+	return elements;
 }
 
-let clickCreateBtn = createBtn.addEventListener('click', function createNewTab() {
+
+//очищення форми та перезапис
+createBtn.addEventListener('click', function createNewTab() {
 	console.log(selectedRoomIds);
-	formText.style.display = 'none';
+	form.style.display = 'none';
 	navTabs.style.display = 'flex';
 	radiusOptionList();
 	createElementsFromArray(selectedRoomIds);
 });
 
-divText.appendChild(formText);
+divText.appendChild(form);
 
-formText.appendChild(h2);
-formText.appendChild(optionRooms);
-formText.appendChild(selectBtn);
-formText.appendChild(selectedRooms);
+form.appendChild(h2);
+form.appendChild(chooseRooms);
+form.appendChild(addRoomToListBtn);
+form.appendChild(selectedRoomsList);
 
 section.appendChild(divText);
 section.appendChild(divPhoto);

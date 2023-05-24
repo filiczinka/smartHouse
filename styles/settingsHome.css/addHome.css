@@ -97,3 +97,9 @@ body {
 .create__btn {
 	width: 100%;
 }
+
+.new__items {
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-weight: 400;
+list-style: none;
+}
