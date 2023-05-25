@@ -1,27 +1,21 @@
-const container = document.querySelector('.option__container');
-container.style.display = 'none';
-const items = Array.from(document.querySelectorAll('.option__item'));
+const optionContainer = document.querySelector('.option__container');
+const optionItems = Array.from(optionContainer.getElementsByClassName('option__item'));
 
-function radiusOptionList() {
-  const radiusX = 220; // Радіус по осі X
-  const radiusY = 150; // Радіус по осі Y
-  const centerX = 895; // Координата центру по осі X
-  const centerY = -340; // Координата центру по осі Y
-  const startAngle = -Math.PI / 2;
-  const angleStep = (Math.PI * 2) / items.length;
+const radius = 220; // Радіус кола
+const centerX = 880; // Центр кола по осі X
+const centerY = 270; // Центр кола по осі Y
 
-  items.forEach((item, index) => {
-    const angle = startAngle + index * angleStep;
-    const x = centerX + radiusX * Math.cos(angle);
-    const y = centerY + radiusY * Math.sin(angle);
+const totalItems = optionItems.length;
+const angle = (2 * Math.PI) / totalItems; // Кут між елементами
 
-    const distance = 60; // Відстань між елементами
-    const offsetX = distance * Math.cos(angle);
-    const offsetY = distance * Math.sin(angle);
+for (let index = 0; index < optionItems.length; index++) {
+  const item = optionItems[index];
+  const itemAngle = angle * index;
 
-    container.style.display = 'block';
-    item.style.position = 'absolute';
-    item.style.left = `${x + offsetX}px`;
-    item.style.top = `${y + offsetY}px`;
-  });
+  const x = Math.round(centerX + radius * Math.cos(itemAngle)) + 'px';
+  const y = Math.round(centerY + radius * Math.sin(itemAngle)) + 'px';
+
+  item.style.position = 'absolute';
+  item.style.left = x;
+  item.style.top = y;
 }

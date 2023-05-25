@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/myHome/myHome-index.css">
+	<title>My Home</title>
+</head>
+
+<body>
+	<header>
+		<h1>MY SMART HOME</h1>
+	</header>
+	<main>
+		<section class="section__container container">
+			<div class=" img__box">
+				<div class=" option__container">
+					<div class="light active option__item"><img class="option__icon" src="img/lightbulb.png" alt="light"></div>
+					<div class="temperature option__item"><img class="option__icon" src="img/thermometer.png" alt="thermometer">
+					</div>
+					<div class="wi-fi off option__item"><img class="option__icon" src="img/wifi.png" alt=""></div>
+					<div class="door option__item"><img class="option__icon" src="img/key.png" alt=""></div>
+					<div class="camera option__item"><img class="option__icon" src="img/video-camera.png" alt=""></div>
+					<div class="security option__item"><img class="option__icon" src="img/thief.png" alt=""></div>
+				</div>
+				<img class="house__img" src="img/banner.png" alt="house icon">
+			</div>
+
+			<div class="form">
+				<div class="form__text">
+					<div class="ligth__text">
+						<h3 class="light__title title">Світло:</h3>
+						<button class="light__on-btn btn active">Ввімкнути</button>
+						<button class="light__off-btn btn">Вимкнути</button>
+					</div>
+
+					<div class="temperature__text">
+						<h3 class="temperature__title title">Температура:</h3>
+						<input id="temperature__input" type="text" name="temperature__input" placeholder="в Цельсіях">
+						<button class="temperature__btn btn">Задати</button>
+					</div>
+
+					<div class="wi-fi__text">
+						<h3 class="wi-fi__title title">Wi-fi:</h3>
+						<button class="wi-fi__on-btn btn">On</button>
+						<button class="wi-fi__off-btn btn off">Off</button>
+					</div>
+
+					<div class="door__text">
+						<h3 class="door__title title">Двері:</h3>
+
+						<button class="door__open btn">Відчинити</button>
+						<button class="door__close btn">Зачинити</button>
+					</div>
+
+					<div class="camera__text">
+						<h3 class="camera__title title">Камера:</h3>
+						<button class="camera__on-btn btn">Ввімкнути</button>
+						<button class="camera__off-btn btn">Вимкнути</button>
+					</div>
+
+					<div class="secuirity__text">
+						<h3 class="secuirity__title title">Охорона</h3>
+						<button class="secuirity__btn btn">Викликати</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	<footer>
+		<p>Alina Filippova</p>
+	</footer>
+
+	<script src="js/radiusList.js"></script>
+</body>
+
+</html>

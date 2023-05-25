@@ -1,0 +1,51 @@
+body {
+	background-image: url(../../img/home-bg.PNG);
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	font-size: 56px;
+	font-family: var(--header-font-family);
+	text-align: center;
+	padding: 20px;
+}
+
+.section__container {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: 50px;
+	max-height: 80vh;
+}
+
+
+.house__img {
+	display: flex;
+	align-items: center;
+}
+
+.option__item {
+	width: 80px;
+	height: 80px;
+	background-color: blue;
+	color: white;
+	border-radius: 50%;
+	border: 2px solid black;
+}
+
+.option__item:hover {
+	box-shadow: 5px 5px 50px 20px rgba(252, 231, 43, 0.717);
+	background-color: rgba(245, 245, 125, 0.476);
+	border: 2px solid white;
+	width: 100px;
+	height: 100px;
+}
+
+.option__icon {
+	width: 90%;
+}
+
