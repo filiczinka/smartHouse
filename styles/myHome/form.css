@@ -50,6 +50,8 @@
 .btn:hover,
 #temperature__input:hover {
 	border: 1px solid black;
+	background-color: #4449e7;
+	color: white;
 }
 
 #temperature__input {
