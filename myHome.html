@@ -38,9 +38,12 @@
 
 					<div class="temperature__text">
 						<h3 class="temperature__title title">Температура:</h3>
-						<input id="temperature__input" type="text" name="temperature__input" placeholder="в Цельсіях">
+						<input id="temperature__input" type="number" name="temperature__input" placeholder="в Цельсіях" min="16" max="33">
 						<button class="temperature__btn btn">Задати</button>
-						<button class="conditioner__btn btn">Ввімкнути</button>
+						<div class="cond__text">
+							<h4 class="cond__title">Кондиціонер:</h4>
+							<button class="conditioner__btn btn">Ввімкнути</button>
+						</div>
 					</div>
 
 					<div class="wi-fi__text">
