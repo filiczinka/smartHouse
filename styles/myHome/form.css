@@ -60,6 +60,7 @@
 	margin: 20px 10px 20px 0px;
 	border: none;
 	border-radius: 25px;
+	width: 180px;
 }
 
 .active {
@@ -77,4 +78,8 @@
 .cond__text {
 display: flex;
 align-items: center;
+}
+
+.cond__title {
+padding-right: 40px;
 }
