@@ -2,8 +2,8 @@ import { toggleConditioner } from "./buttons.js";
 
 export class ClimateSystem {
 	constructor(temp, airConditioner) {
-		this.temp = temp;
-		this.airConditioner = airConditioner;
+		this.temp = 18;
+		this.airConditioner = false;
 	}
 	setTemperature(temp) {
 		this.temperature = temp;
