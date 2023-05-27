@@ -1,9 +1,9 @@
 import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
 
-class InternetSystem extends SmartHouse {
-	constructor(state) {
-		this.state = state;
-		this.doorsSensors = false;
+class DoorSystem{
+	constructor(name) {
+		this.name = name;
+		this.door = false;
 	}
 	openDoor() {
 		this.door = true;
@@ -16,24 +16,21 @@ class InternetSystem extends SmartHouse {
 	}
 }
 
-const smartHouse = new SmartHouse("My Smart Home");
-smartHouse.addComponent(door);
-
-const door = new DoorSystem('Wi-Fi');
-const doorBtnOn = document.querySelector('.door__on-btn');
-const doortImg = document.querySelector('.door');
-const doorBtnOff = document.querySelector('.door__off-btn');
+const door = new DoorSystem('Двері');
+const doorBtnOn = document.querySelector('.door__open');
+const doorImg = document.querySelector('.door');
+const doorBtnOff = document.querySelector('.door__close');
 
 doorBtnOn.addEventListener('click', function openDoor() {
 	activeBtn(doorBtnOff, doorBtnOn);
 	activeImg(doorImg);
-	door.turnOnInternet();
+	door.openDoor();
 	console.log(door);
 });
 
-internetBtnOff.addEventListener('click', function closeDoor() {
-	offBtn(internetBtnOn, internetBtnOff);
-	offImg(internetImg);
-	internet.turnOffInternet();
-	console.log(internet);
+doorBtnOff.addEventListener('click', function closeDoor() {
+	offBtn(doorBtnOn, doorBtnOff);
+	offImg(doorImg);
+	door.closeDoor();
+	console.log(door);
 });
