@@ -76,10 +76,15 @@
 }
 
 .cond__text {
-display: flex;
-align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .cond__title {
-padding-right: 40px;
+	padding-right: 40px;
+}
+
+.actually-btn {
+	width: 100%;
+	background-color: #ec2b92;
 }

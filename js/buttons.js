@@ -1,4 +1,5 @@
 import { ClimateSystem } from "./climateSystem.js";
+import { SecuiritySystem, secuirityBtn, secuirity } from "./secuirity.js";
 
 //кнопки активного та пасивного стану
 export function activeBtn(event1, event2) {
@@ -39,5 +40,35 @@ export function toggleConditioner() {
 		button.innerHTML = 'Ввімкнено';
 		activeImg(tempImg);
 		climateSystem.turnOnConditioner();
+	}
+}
+
+const secuirityImg = document.querySelector('.secuirity');
+let isRed = true;
+function changeColor() {
+	secuirityImg.style.backgroundColor = isRed ? 'red' : 'white';
+	secuirityBtn.style.backgroundColor = isRed ? 'red' : 'white';
+	isRed = !isRed;
+}
+
+let intervalAlarm;
+export function toggleSecuirity() {
+	const button = document.querySelector(".secuirity__btn");
+	const secuirityImg = document.querySelector('.secuirity');
+
+	if (button.classList.contains("active")) {
+		button.classList.remove("active");
+		button.classList.add("off");
+		button.innerHTML = 'Вимкнено';
+		offImg(secuirityImg);
+		secuirity.turnOffSecuirity();
+		clearInterval(intervalAlarm);
+	} else {
+		button.classList.remove("off");
+		button.classList.add("active");
+		button.innerHTML = 'Ввімкнено';
+		activeImg(secuirityImg);
+		secuirity.turnOnSecuirity();
+		intervalAlarm = setInterval(changeColor, 500);
 	}
 }
