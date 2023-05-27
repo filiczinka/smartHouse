@@ -7,7 +7,7 @@ export class ClimateSystem {
 		this.airConditioner = false;
 	}
 	setTemperature(temp) {
-		this.temperature = temp;
+		this.temp = temp;
 		console.log(`Температуру встановлено на ${temp}°C.`);
 	}
 	turnOnConditioner() {
@@ -22,11 +22,14 @@ export class ClimateSystem {
 
 
 const climateSystem = new ClimateSystem('Температура');
+
+//кнопка кондиціонеру
 const condBtn = document.querySelector('.conditioner__btn');
 condBtn.addEventListener('click', function activeClimate() {
 	toggleConditioner();
 });
 
+//виставлення температури
 const tempBtn = document.querySelector('.temperature__btn');
 tempBtn.addEventListener('click', function tempState() {
 	const currentTemp = document.getElementById('temperature__input').value;

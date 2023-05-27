@@ -1,5 +1,5 @@
 import { ClimateSystem } from "./climateSystem.js";
-import { SecuiritySystem, secuirityBtn, secuirity } from "./secuirity.js";
+import { secuirityBtn, secuirity } from "./secuirity.js";
 
 //кнопки активного та пасивного стану
 export function activeBtn(event1, event2) {
@@ -34,15 +34,18 @@ export function toggleConditioner() {
 		button.innerHTML = 'Вимкнено';
 		offImg(tempImg);
 		climateSystem.turnOffConditioner();
+		console.log(climateSystem);
 	} else {
 		button.classList.remove("off");
 		button.classList.add("active");
 		button.innerHTML = 'Ввімкнено';
 		activeImg(tempImg);
 		climateSystem.turnOnConditioner();
+		console.log(climateSystem);
 	}
 }
 
+//кнопка Alarm
 const secuirityImg = document.querySelector('.secuirity');
 let isRed = true;
 function changeColor() {

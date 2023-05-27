@@ -19,7 +19,7 @@ export class SecuiritySystem {
 export const secuirity = new SecuiritySystem('ALARM');
 export const secuirityBtn = document.querySelector('.secuirity__btn');
 
-
+//toogle on off alarm
 secuirityBtn.addEventListener('click', function activeSecuirity() {
 	toggleSecuirity();
 	console.log(secuirity);

@@ -1,8 +1,9 @@
 import {  activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
 
 class InternetSystem {
-	constructor(state) {
-		this.state = state;
+	constructor(name) {
+		this.name = name;
+		this.state = 'off';
 	}
 	turnOnInternet() {
 		this.state = 'On';

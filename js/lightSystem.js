@@ -16,6 +16,8 @@ class LightSystem {
 }
 
 const light = new LightSystem('Cвітло');
+
+//on off light
 const lightBtnOn = document.querySelector('.light__on-btn');
 const lightImg = document.querySelector('.light');
 

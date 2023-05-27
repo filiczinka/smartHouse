@@ -3,15 +3,15 @@ import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
 class DoorSystem{
 	constructor(name) {
 		this.name = name;
-		this.door = false;
+		this.state = 'close';
 	}
 	openDoor() {
-		this.door = true;
+		this.state = 'open';
 		console.log('Двері відчинено!');
 	}
 
 	closeDoor() {
-		this.door = false;
+		this.state = 'close';
 		console.log('Двері зачинено!');
 	}
 }

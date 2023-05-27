@@ -24,13 +24,13 @@ const cameraBtnOff = document.querySelector('.camera__off-btn');
 cameraBtnOn.addEventListener('click', function onCamera() {
 	activeBtn(cameraBtnOff, cameraBtnOn);
 	activeImg(cameraImg);
-	camera.openDoor();
+	camera.turnOnCamera();
 	console.log(camera);
 });
 
 cameraBtnOff.addEventListener('click', function offCamera() {
 	offBtn(cameraBtnOn, cameraBtnOff);
 	offImg(cameraImg);
-	camera.closeDoor();
-	camera.log(camera);
+	camera.turnOffCamera();
+	console.log(camera);
 });
