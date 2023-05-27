@@ -21,7 +21,7 @@ export class ClimateSystem {
 }
 
 
-const climateSystem = new ClimateSystem("Climate");
+const climateSystem = new ClimateSystem('Температура');
 const condBtn = document.querySelector('.conditioner__btn');
 condBtn.addEventListener('click', function activeClimate() {
 	toggleConditioner();
