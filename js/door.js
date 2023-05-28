@@ -1,8 +1,9 @@
 import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
+import { SmartHouse, smartHouse } from "./house.js";
 
-class DoorSystem{
+class DoorSystem extends SmartHouse {
 	constructor(name) {
-		this.name = name;
+		super(name);
 		this.state = 'close';
 	}
 	openDoor() {
@@ -17,6 +18,8 @@ class DoorSystem{
 }
 
 const door = new DoorSystem('Двері');
+smartHouse.addComponent(door);
+
 const doorBtnOn = document.querySelector('.door__open');
 const doorImg = document.querySelector('.door');
 const doorBtnOff = document.querySelector('.door__close');

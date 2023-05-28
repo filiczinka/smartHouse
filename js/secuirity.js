@@ -1,8 +1,9 @@
-import { activeBtn, offBtn, activeImg, offImg, toggleSecuirity } from "./buttons.js";
+import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
+import { SmartHouse, smartHouse } from "./house.js";
 
-export class SecuiritySystem {
+export class SecuiritySystem extends SmartHouse {
 	constructor(name) {
-		this.name = name;
+		super(name);
 		this.secuirity = 'false';
 	}
 	turnOnSecuirity() {
@@ -17,6 +18,8 @@ export class SecuiritySystem {
 }
 
 export const secuirity = new SecuiritySystem('ALARM');
+smartHouse.addComponent(secuirity);
+
 export const secuirityBtn = document.querySelector('.secuirity__btn');
 
 //toogle on off alarm
