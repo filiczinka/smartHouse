@@ -54,6 +54,16 @@ function changeColor() {
 	isRed = !isRed;
 }
 
+function playAudio() {
+	let audio = document.getElementById("audio__alarm");
+	audio.play();
+}
+
+function pauseAudio() {
+	let audio = document.getElementById("audio__alarm");
+	audio.pause();
+}
+
 let intervalAlarm;
 export function toggleSecuirity() {
 	const button = document.querySelector(".secuirity__btn");
@@ -66,6 +76,7 @@ export function toggleSecuirity() {
 		offImg(secuirityImg);
 		secuirity.turnOffSecuirity();
 		clearInterval(intervalAlarm);
+		pauseAudio();
 	} else {
 		button.classList.remove("off");
 		button.classList.add("active");
@@ -73,5 +84,6 @@ export function toggleSecuirity() {
 		activeImg(secuirityImg);
 		secuirity.turnOnSecuirity();
 		intervalAlarm = setInterval(changeColor, 500);
+		playAudio();
 	}
 }

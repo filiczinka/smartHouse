@@ -1,4 +1,4 @@
-import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
+import { activeBtn, offBtn, activeImg, offImg, toggleSecuirity } from "./buttons.js";
 import { SmartHouse, smartHouse } from "./house.js";
 
 export class SecuiritySystem extends SmartHouse {
