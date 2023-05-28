@@ -7,7 +7,6 @@ export const light = new System('Cвітло');
 const lightBtnOn = document.querySelector('.light__on-btn');
 const lightImg = document.querySelector('.light');
 const audioLight = document.querySelector('#audio__light');
-const audioLightOff = document.querySelector('#audio__lightOff');
 
 lightBtnOn.addEventListener('click', function activeLight() {
 	activeBtn(lightBtnOff, lightBtnOn);
@@ -23,6 +22,6 @@ lightBtnOff.addEventListener('click', function offLight() {
 	offBtn(lightBtnOn, lightBtnOff);
 	offImg(lightImg);
 	light.turnOff();
-	pauseAudio(audioLightOff);
+	pauseAudio(audioLight);
 	console.log(light);
 });
