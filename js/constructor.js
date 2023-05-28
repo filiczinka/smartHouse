@@ -40,13 +40,6 @@ export class System {
 			Object.assign(this, JSON.parse(savedState));
 		}
 	}
-	loadState() {
-		const savedState = localStorage.getItem(this.name);
-		if (savedState) {
-			const parsedState = JSON.parse(savedState);
-			Object.assign(this, parsedState);
-		}
-	}
 }
 
 export const system = new System('My Smart Home');
