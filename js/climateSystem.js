@@ -1,4 +1,4 @@
-import { toggleConditioner } from "./buttons.js";
+import { activeBtn, activeImg, offBtn, offImg, toggleConditioner } from "./buttons.js";
 import { System } from "./constructor.js";
 
 export const climateSystem = new System('Температура');
@@ -11,6 +11,7 @@ condBtn.addEventListener('click', function activeClimate() {
 
 //виставлення температури
 const tempBtn = document.querySelector('.temperature__btn');
+const tempBtnOff = document.querySelector('.temperature__btnOff');
 tempBtn.addEventListener('click', function tempState() {
 	const currentTemp = document.getElementById('temperature__input').value;
 	if (currentTemp === '' || currentTemp > 33 || currentTemp < 16) {
@@ -21,4 +22,21 @@ tempBtn.addEventListener('click', function tempState() {
 		tempBtn.innerHTML = 'Задано';
 		console.log(climateSystem);
 	}
+});
+
+const tempImg = document.querySelector('.temperature'); 
+
+tempBtn.addEventListener('click', function activeLight() {
+	activeBtn(tempBtnOff, tempBtn);
+	activeImg(tempImg);
+	climateSystem.turnOn();
+	console.log(climateSystem);
+});
+
+tempBtnOff.addEventListener('click', function offLight() {
+	offBtn(tempBtn, tempBtnOff);
+	offImg(tempImg);
+	climateSystem.turnOff();
+	climateSystem.temp = 0;
+	console.log(climateSystem);
 });

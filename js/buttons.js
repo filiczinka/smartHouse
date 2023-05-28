@@ -54,13 +54,11 @@ function changeColor() {
 	isRed = !isRed;
 }
 
-function playAudio() {
-	let audio = document.getElementById("audio__alarm");
+export function playAudio(audio) {
 	audio.play();
 }
 
-function pauseAudio() {
-	let audio = document.getElementById("audio__alarm");
+export function pauseAudio(audio) {
 	audio.pause();
 }
 
@@ -68,7 +66,7 @@ let intervalAlarm;
 export function toggleSecuirity() {
 	const button = document.querySelector(".secuirity__btn");
 	const secuirityImg = document.querySelector('.secuirity');
-
+	const audioAlarm = document.getElementById("audio__alarm");
 	if (button.classList.contains("active")) {
 		button.classList.remove("active");
 		button.classList.add("off");
@@ -76,7 +74,7 @@ export function toggleSecuirity() {
 		offImg(secuirityImg);
 		secuirity.turnOff();
 		clearInterval(intervalAlarm);
-		pauseAudio();
+		pauseAudio(audioAlarm);
 	} else {
 		button.classList.remove("off");
 		button.classList.add("active");
@@ -84,6 +82,6 @@ export function toggleSecuirity() {
 		activeImg(secuirityImg);
 		secuirity.turnOn();
 		intervalAlarm = setInterval(changeColor, 500);
-		playAudio();
+		playAudio(audioAlarm);
 	}
 }

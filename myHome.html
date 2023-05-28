@@ -42,9 +42,11 @@
 						<input id="temperature__input" type="number" name="temperature__input" placeholder="в Цельсіях" min="16"
 							max="33">
 						<button class="temperature__btn btn">Задати</button>
+						<button class="temperature__btnOff btn">Вимкнути</button>
 						<div class="cond__text">
 							<h4 class="cond__title">Кондиціонер:</h4>
 							<button class="conditioner__btn btn">Ввімкнути</button>
+							<audio id="cond" src="audio/light.mp3"></audio>
 						</div>
 					</div>
 
@@ -52,6 +54,8 @@
 						<h3 class="wi-fi__title title">Wi-fi:</h3>
 						<button class="wi-fi__on-btn btn btn__on">On</button>
 						<button class="wi-fi__off-btn btn btn__off">Off</button>
+						<audio id="audio__light" src="audio/light.mp3"></audio>
+						<audio id="audio__lightOff" src="audio/light.mp3"></audio>
 					</div>
 
 					<div class="door__text">
