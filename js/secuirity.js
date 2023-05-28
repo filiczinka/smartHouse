@@ -1,4 +1,4 @@
-import { activeBtn, offBtn, activeImg, offImg, toggleSecuirity } from "./buttons.js";
+import { toggleSecuirity } from "./buttons.js";
 import { System } from "./constructor.js";
 
 export const secuirity = new System('ALARM');

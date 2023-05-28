@@ -1,4 +1,3 @@
-import { System, system } from "./constructor.js";
 import { light } from "./lightSystem.js";
 import { climateSystem } from "./climateSystem.js";
 import { door } from "./door.js";
