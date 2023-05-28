@@ -7,7 +7,6 @@ export class System {
 	turnOn() {
 		this.state = 'On';
 		console.log(this.name + ' ввімкнено');
-		this.saveState();
 	}
 	turnOff() {
 		this.state = 'Off';
@@ -17,18 +16,15 @@ export class System {
 	openDoor() {
 		this.state = 'open';
 		console.log('Двері відчинено!');
-		this.saveState();
 	}
 
 	closeDoor() {
 		this.state = 'close';
 		console.log('Двері зачинено!');
-		this.saveState();
 	}
 	setTemperature(temp) {
 		this.temp = temp;
 		console.log(`Температуру встановлено на ${temp}°C.`);
-		this.saveState();
 	}
 	saveState() {
 		localStorage.setItem(this.name, JSON.stringify(this));

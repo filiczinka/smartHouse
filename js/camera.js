@@ -10,6 +10,7 @@ cameraBtnOn.addEventListener('click', function onCamera() {
 	activeBtn(cameraBtnOff, cameraBtnOn);
 	activeImg(cameraImg);
 	camera.turnOn();
+	camera.saveState();
 	console.log(camera);
 });
 
@@ -17,5 +18,6 @@ cameraBtnOff.addEventListener('click', function offCamera() {
 	offBtn(cameraBtnOn, cameraBtnOff);
 	offImg(cameraImg);
 	camera.turnOff();
+	camera.saveState();
 	console.log(camera);
 });
