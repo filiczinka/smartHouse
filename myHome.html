@@ -35,6 +35,8 @@
 						<h3 class="light__title title">Світло:</h3>
 						<button class="light__on-btn btn btn__on">Ввімкнути</button>
 						<button class="light__off-btn btn btn__off">Вимкнути</button>
+						<audio id="audio__light" src="audio/light.mp3"></audio>
+						<audio id="audio__lightOff" src="audio/lightOff.mp3"></audio>
 					</div>
 
 					<div class="temperature__text">
@@ -54,8 +56,6 @@
 						<h3 class="wi-fi__title title">Wi-fi:</h3>
 						<button class="wi-fi__on-btn btn btn__on">On</button>
 						<button class="wi-fi__off-btn btn btn__off">Off</button>
-						<audio id="audio__light" src="audio/light.mp3"></audio>
-						<audio id="audio__lightOff" src="audio/lightOff.mp3"></audio>
 					</div>
 
 					<div class="door__text">
@@ -84,7 +84,8 @@
 
 
 	<footer>
-		<p>Alina Filippova</p>
+		<p class="footer__name">Alina Filippova</p>
+		<div id="current-time"></div>
 	</footer>
 
 	<script src="js/radiusList.js"></script>
@@ -97,6 +98,7 @@
 	<script type="module" src="js/door.js"></script>
 	<script type="module" src="js/camera.js"></script>
 	<script type="module" src="js/secuirity.js"></script>
+	<script src="js/footer.js"></script>
 </body>
 
 </html>

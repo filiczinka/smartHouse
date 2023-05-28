@@ -28,6 +28,7 @@ export function toggleConditioner() {
 	const button = document.querySelector(".conditioner__btn");
 	const tempImg = document.querySelector('.temperature');
 	const climateSystem = new System("Climate");
+	const audioCond = document.querySelector('#cond');
 	if (button.classList.contains("active")) {
 		button.classList.remove("active");
 		button.classList.add("off");
@@ -35,6 +36,7 @@ export function toggleConditioner() {
 		offImg(tempImg);
 		climateSystem.turnOff();
 		console.log(climateSystem);
+		pauseAudio(audioCond);
 	} else {
 		button.classList.remove("off");
 		button.classList.add("active");
@@ -42,6 +44,7 @@ export function toggleConditioner() {
 		activeImg(tempImg);
 		climateSystem.turnOn();
 		console.log(climateSystem);
+		playAudio(audioCond);
 	}
 }
 
