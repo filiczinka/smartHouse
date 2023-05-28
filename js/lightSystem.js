@@ -1,9 +1,8 @@
 import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
-import { SmartHouse, smartHouse } from "./house.js";
 
-class LightSystem extends SmartHouse {
+export class LightSystem {
 	constructor(name) {
-		super(name);
+		this.name = name;
 		this.state = 'off';
 	}
 	turnOn() {
@@ -16,8 +15,7 @@ class LightSystem extends SmartHouse {
 	}
 }
 
-const light = new LightSystem('Cвітло');
-smartHouse.addComponent(light); 
+export const light = new LightSystem('Cвітло');
 
 //on off light
 const lightBtnOn = document.querySelector('.light__on-btn');

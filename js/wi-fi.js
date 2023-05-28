@@ -1,9 +1,8 @@
 import {  activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
-import { SmartHouse, smartHouse } from "./house.js";
 
-class InternetSystem extends SmartHouse {
+export class InternetSystem {
 	constructor(name) {
-		super(name);
+		this.name = name;
 		this.state = 'off';
 	}
 	turnOnInternet() {
@@ -17,7 +16,6 @@ class InternetSystem extends SmartHouse {
 }
 
 const internet = new InternetSystem('Wi-Fi');
-smartHouse.addComponent(internet);
 
 const internetBtnOn = document.querySelector('.wi-fi__on-btn');
 const internetImg = document.querySelector('.wi-fi');

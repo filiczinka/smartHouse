@@ -1,9 +1,8 @@
 import { toggleConditioner } from "./buttons.js";
-import { SmartHouse, smartHouse } from "./house.js";
 
-export class ClimateSystem extends SmartHouse {
+export class ClimateSystem {
 	constructor(name) {
-		super(name);
+		this.name = name;
 		this.temp = 18;
 		this.airConditioner = false;
 	}
@@ -23,7 +22,6 @@ export class ClimateSystem extends SmartHouse {
 
 
 const climateSystem = new ClimateSystem('Температура');
-smartHouse.addComponent(climateSystem); 
 
 //кнопка кондиціонеру
 const condBtn = document.querySelector('.conditioner__btn');
