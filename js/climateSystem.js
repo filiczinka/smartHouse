@@ -1,27 +1,7 @@
 import { toggleConditioner } from "./buttons.js";
+import { System } from "./constructor.js";
 
-export class ClimateSystem {
-	constructor(name) {
-		this.name = name;
-		this.temp = 18;
-		this.airConditioner = false;
-	}
-	setTemperature(temp) {
-		this.temp = temp;
-		console.log(`Температуру встановлено на ${temp}°C.`);
-	}
-	turnOnConditioner() {
-		this.airConditioner = true;
-		console.log('Кондиціонер ввімкнено!');
-	}
-	turnOffConditioner() {
-		this.airConditioner = false;
-		console.log('Кондиціонер вимкнено!');
-	}
-}
-
-
-const climateSystem = new ClimateSystem('Температура');
+export const climateSystem = new System('Температура');
 
 //кнопка кондиціонеру
 const condBtn = document.querySelector('.conditioner__btn');

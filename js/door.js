@@ -1,22 +1,7 @@
 import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
+import { System } from "./constructor.js";
 
-export class DoorSystem {
-	constructor(name) {
-		this.name = name;
-		this.state = 'close';
-	}
-	openDoor() {
-		this.state = 'open';
-		console.log('Двері відчинено!');
-	}
-
-	closeDoor() {
-		this.state = 'close';
-		console.log('Двері зачинено!');
-	}
-}
-
-const door = new DoorSystem('Двері');
+export const door = new System('Двері');
 
 const doorBtnOn = document.querySelector('.door__open');
 const doorImg = document.querySelector('.door');

@@ -1,21 +1,7 @@
 import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
+import { System } from "./constructor.js";
 
-export class LightSystem {
-	constructor(name) {
-		this.name = name;
-		this.state = 'off';
-	}
-	turnOn() {
-		this.state = 'On';
-		console.log('Cвітло ввімкнено');
-	}
-	turnOff() {
-		this.state = 'Off';
-		console.log('Cвітло Вимкнено');
-	}
-}
-
-export const light = new LightSystem('Cвітло');
+export const light = new System('Cвітло');
 
 //on off light
 const lightBtnOn = document.querySelector('.light__on-btn');

@@ -1,21 +1,7 @@
 import {  activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
+import { System } from "./constructor.js";
 
-export class InternetSystem {
-	constructor(name) {
-		this.name = name;
-		this.state = 'off';
-	}
-	turnOnInternet() {
-		this.state = 'On';
-		console.log('Wi-Fi ввімкнено');
-	}
-	turnOffInternet() {
-		this.state = 'Off';
-		console.log('Wi-Fi вимкнено');
-	}
-}
-
-const internet = new InternetSystem('Wi-Fi');
+export const internet = new System('Wi-Fi');
 
 const internetBtnOn = document.querySelector('.wi-fi__on-btn');
 const internetImg = document.querySelector('.wi-fi');
@@ -24,13 +10,13 @@ const internetBtnOff = document.querySelector('.wi-fi__off-btn');
 internetBtnOn.addEventListener('click', function activeInternet() {
 	activeBtn(internetBtnOff, internetBtnOn);
 	activeImg(internetImg);
-	internet.turnOnInternet();
+	internet.turnOn();
 	console.log(internet);
 });
 
 internetBtnOff.addEventListener('click', function offInternet() {
 	offBtn(internetBtnOn, internetBtnOff);
 	offImg(internetImg);
-	internet.turnOffInternet();
+	internet.turnOff();
 	console.log(internet);
 });

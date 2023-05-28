@@ -1,5 +1,5 @@
-import { ClimateSystem } from "./climateSystem.js";
 import { secuirityBtn, secuirity } from "./secuirity.js";
+import { System } from "./constructor.js";
 
 //кнопки активного та пасивного стану
 export function activeBtn(event1, event2) {
@@ -27,20 +27,20 @@ export function offImg(event) {
 export function toggleConditioner() {
 	const button = document.querySelector(".conditioner__btn");
 	const tempImg = document.querySelector('.temperature');
-	const climateSystem = new ClimateSystem("Climate");
+	const climateSystem = new System("Climate");
 	if (button.classList.contains("active")) {
 		button.classList.remove("active");
 		button.classList.add("off");
 		button.innerHTML = 'Вимкнено';
 		offImg(tempImg);
-		climateSystem.turnOffConditioner();
+		climateSystem.turnOff();
 		console.log(climateSystem);
 	} else {
 		button.classList.remove("off");
 		button.classList.add("active");
 		button.innerHTML = 'Ввімкнено';
 		activeImg(tempImg);
-		climateSystem.turnOnConditioner();
+		climateSystem.turnOn();
 		console.log(climateSystem);
 	}
 }
@@ -74,7 +74,7 @@ export function toggleSecuirity() {
 		button.classList.add("off");
 		button.innerHTML = 'Вимкнено';
 		offImg(secuirityImg);
-		secuirity.turnOffSecuirity();
+		secuirity.turnOff();
 		clearInterval(intervalAlarm);
 		pauseAudio();
 	} else {
@@ -82,7 +82,7 @@ export function toggleSecuirity() {
 		button.classList.add("active");
 		button.innerHTML = 'Ввімкнено';
 		activeImg(secuirityImg);
-		secuirity.turnOnSecuirity();
+		secuirity.turnOn();
 		intervalAlarm = setInterval(changeColor, 500);
 		playAudio();
 	}

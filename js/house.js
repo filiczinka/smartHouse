@@ -1,26 +1,15 @@
-import { LightSystem, light } from "./lightSystem.js";
-import { ClimateSystem } from "./climateSystem.js";
-import { CameraSystem } from "./camera.js";
-import { DoorSystem } from "./door.js";
-import { SecuiritySystem } from "./secuirity.js";
-import { InternetSystem } from "./wi-fi.js";
+import { System, system } from "./constructor.js";
+import { light } from "./lightSystem.js";
+import { climateSystem } from "./climateSystem.js";
+import { door } from "./door.js";
+import { camera } from "./camera.js";
+import { internet } from "./wi-fi.js";
+import { secuirity } from "./secuirity.js";
 
-export class SmartHouse {
-	constructor(name) {
-		this.name = name;
-	}
-	getStatus() {
-		return {
-			LightSystem: light.state,
-		};
-	}
-}
-
-export const smartHouse = new SmartHouse('My Smart House');
 const actuallyBtn = document.querySelector('.actually-btn');
 
 actuallyBtn.addEventListener('click', function actuallyState() {
 	actuallyBtn.classList.add('active');
-	smartHouse.getStatus();
-	console.log(smartHouse);
+	alert(`Cвітло: ${light.state}! - Температура: ${climateSystem.temp}! - Кондиціонер: ${climateSystem.state}! - WI-FI: ${internet.state}! - Двері: ${door.state}! - Камери: ${camera.state}! - Сигналізація: ${secuirity.state}!`);
+	console.log({ light, climateSystem, door, camera, internet, secuirity });
 })
