@@ -31,7 +31,7 @@ h1 {
 .option__item {
 	width: 80px;
 	height: 80px;
-	background-color: blue;
+	background-color: red;
 	color: white;
 	border-radius: 50%;
 	border: 2px solid black;
