@@ -88,3 +88,11 @@
 	width: 100%;
 	background-color: #ec2b92;
 }
+
+.modal__content {
+background-color: rgb(233, 197, 197);
+width: 120px;
+border-radius: 25px;
+padding: 10px;
+margin: 10px;
+}
