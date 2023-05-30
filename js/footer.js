@@ -6,7 +6,7 @@ function getCurrentTime() {
 		.then(response => response.json())
 		.then(data => {
 			const currentTime = data.formatted;
-			resultElement.textContent = `Time Zone: ${timeZone}, Current Time: ${currentTime}`;
+			resultElement.textContent = `Current Time: ${currentTime}`;
 		})
 		.catch(error => {
 			console.log("Помилка при отриманні часу:", error);
