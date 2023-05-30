@@ -10,6 +10,9 @@ import { tv } from "./tv.js";
 const actuallyBtn = document.querySelector('.actually-btn');
 actuallyBtn.addEventListener('click', function actuallyState() {
 	actuallyBtn.classList.add('active');
+	setTimeout(() => {
+		actuallyBtn.classList.remove('active');
+	}, 3000);
 	alert(`Cвітло: ${light.state}! - Температура: ${climateSystem.temp}! - Кондиціонер: ${condSystem.state}! - WI-FI: ${internet.state}! - Двері: ${door.state}! - Відеоспостереження: ${camera.state}! - Сигналізація: ${secuirity.state}! - Телевізор: ${tv.isOn}`);
 	console.log(`Cвітло: ${light.state}! - Температура: ${climateSystem.temp}! - Кондиціонер: ${condSystem.state}! - WI-FI: ${internet.state}! - Двері: ${door.state}! - Відеоспостереження: ${camera.state}! - Сигналізація: ${secuirity.state}! - Телевізор: ${tv.isOn}`);
 	console.log({ light, climateSystem, condSystem, door, camera, internet, secuirity, tv });
