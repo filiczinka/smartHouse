@@ -1,10 +1,8 @@
 const optionContainer = document.querySelector('.option__container');
 const optionItems = Array.from(optionContainer.getElementsByClassName('option__item'));
-
 const radius = 220; // Радіус кола
 const centerX = 880; // Центр кола по осі X
 const centerY = 270; // Центр кола по осі Y
-
 const totalItems = optionItems.length;
 const angle = (2 * Math.PI) / totalItems; // Кут між елементами
 

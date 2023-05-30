@@ -2,10 +2,10 @@ import { activeBtn, offBtn, activeImg, offImg } from "./buttons.js";
 import { System } from "./constructor.js";
 export const camera = new System('Камери');
 
-const cameraBtnOn = document.querySelector('.camera__on-btn');
 const cameraImg = document.querySelector('.camera');
-const cameraBtnOff = document.querySelector('.camera__off-btn');
 
+//ввімкнути камери
+const cameraBtnOn = document.querySelector('.camera__on-btn');
 cameraBtnOn.addEventListener('click', function onCamera() {
 	activeBtn(cameraBtnOff, cameraBtnOn);
 	activeImg(cameraImg);
@@ -13,6 +13,8 @@ cameraBtnOn.addEventListener('click', function onCamera() {
 	console.log(camera);
 });
 
+//вимкнути камери
+const cameraBtnOff = document.querySelector('.camera__off-btn');
 cameraBtnOff.addEventListener('click', function offCamera() {
 	offBtn(cameraBtnOn, cameraBtnOff);
 	offImg(cameraImg);
