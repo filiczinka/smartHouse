@@ -4,8 +4,8 @@ class SmartTV extends System {
 	constructor(name) {
 		super(name);
 		this.isOn = false;
-		this.currentChannel = null;
-		this.volume = 50;
+		this.currentChannel = 1;
+		this.volume = 20;
 		this.channels = {
 			1: 'Інтер',
 			2: 'Україна',
@@ -42,13 +42,10 @@ class SmartTV extends System {
 			const modalContent = modal.querySelector('.modal-content');
 
 			modal.style.display = 'block';
-			
-
 			modalContent.innerHTML = '';
 			const showChannel = Object.values(this.channels);
 			for (let i = 0; i < showChannel.length; i++) {
 				const channel = showChannel[i];
-
 				const button = document.createElement('button');
 				button.className = 'modal__content';
 				button.textContent = channel;
@@ -104,10 +101,10 @@ class SmartTV extends System {
 	}
 }
 
-const tvPowerButton = document.querySelector('.tv-power-button');
-const tv = new SmartTV("TV");
+export const tv = new SmartTV("TV");
 let tvIsOn = true;
-
+//ввімкнення TV
+const tvPowerButton = document.querySelector('.tv-power-button');
 tvPowerButton.addEventListener('click', () => {
 	if (tvIsOn) {
 		tv.turnOff();
@@ -118,29 +115,32 @@ tvPowerButton.addEventListener('click', () => {
 	}
 });
 
+//кнопка показати канали
 const showChannelsButton = document.querySelector('.tv-show-channels');
 showChannelsButton.addEventListener("click", () => {
 	tv.showChannels();
 });
 
-
+//канал вперед
 const channelUpButton = document.querySelector('.tv-channel-up-button');
-const channelDownButton = document.querySelector('.tv-channel-down-button');
-const volumeUpButton = document.querySelector('.tv-volume-up-button');
-const volumeDownButton = document.querySelector('.tv-volume-down-button');
-
 channelUpButton.addEventListener("click", () => {
 	tv.channelUp();
 });
 
+//канал назад
+const channelDownButton = document.querySelector('.tv-channel-down-button');
 channelDownButton.addEventListener("click", () => {
 	tv.channelDown();
 });
 
+//звук більше
+const volumeUpButton = document.querySelector('.tv-volume-up-button');
 volumeUpButton.addEventListener("click", () => {
 	tv.volumeUp();
 });
 
+//звук менше
+const volumeDownButton = document.querySelector('.tv-volume-down-button');
 volumeDownButton.addEventListener("click", () => {
 	tv.volumeDown();
 });
